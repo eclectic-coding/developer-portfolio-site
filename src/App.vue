@@ -3,8 +3,9 @@
 
 <template>
 
-  <main>
-    <p>hello world</p>
+  <main class="container">
+    <h1>hello world</h1>
+    <button class="btn btn-primary">hello</button>
   </main>
 </template>
 
