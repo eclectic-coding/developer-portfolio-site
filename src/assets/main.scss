@@ -1,3 +1,11 @@
-@import "customize-bootstrap";
-@import "bootstrap/scss/bootstrap";
-@import "custom.scss";
+// Use the customization module and Bootstrap's module system
+@use "./_customize-bootstrap" as customize;
+
+@use "bootstrap" with (
+  $primary: customize.$primary,
+  $body-bg: customize.$body-bg,
+  $link-color: customize.$link-color
+);
+
+// Bring custom styles into the stylesheet (as * so selectors like h1 remain global)
+@use "./_custom" as *;

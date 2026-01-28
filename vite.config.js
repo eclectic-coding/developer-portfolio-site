@@ -10,6 +10,15 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  // Pass options to the Sass compiler. `quietDeps` is a Dart Sass JS API option
+  // that silences deprecation warnings coming from dependencies (like Bootstrap).
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

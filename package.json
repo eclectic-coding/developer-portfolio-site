@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "cross-env SASS_QUIET_DEPRECATIONS=1 vite",
+    "build": "cross-env SASS_QUIET_DEPRECATIONS=1 vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.3",
+    "cross-env": "^10.1.0",
     "sass-embedded": "^1.97.3",
     "vite": "^7.3.1",
     "vite-plugin-vue-devtools": "^8.0.5"
